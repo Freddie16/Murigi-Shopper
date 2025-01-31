@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../services/cart.service';
-import { ProductService } from '../services/product.service'; // <-- Add this
-import { Router } from '@angular/router'; // <-- Add this
+import { ProductService } from '../services/product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -10,12 +10,12 @@ import { Router } from '@angular/router'; // <-- Add this
 })
 export class NavbarComponent implements OnInit {
   cartItemCount: number = 0;
-  searchQuery: string = ''; // <-- Add this
+  searchQuery: string = '';
 
   constructor(
     private cartService: CartService,
-    private productService: ProductService, // <-- Add this
-    private router: Router // <-- Add this
+    private productService: ProductService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -24,7 +24,6 @@ export class NavbarComponent implements OnInit {
     });
   }
 
-  // Add this method
   onSearch(): void {
     if (this.searchQuery.trim()) {
       this.productService.getProducts().subscribe((products) => {
@@ -32,9 +31,9 @@ export class NavbarComponent implements OnInit {
           product.title.toLowerCase().includes(this.searchQuery.toLowerCase())
         );
         if (foundProduct) {
-          this.router.navigate(['/products', foundProduct.id]); // Navigate to the product details page
+          this.router.navigate(['/products', foundProduct.id]);
         } else {
-          alert('Product not found'); // Show an alert if the product is not found
+          alert('Product not found');
         }
       });
     }

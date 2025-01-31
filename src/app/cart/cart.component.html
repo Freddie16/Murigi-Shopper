@@ -1,1 +1,44 @@
-<p>cart works!</p>
+<div class="container mt-4">
+    <h2>Your Cart</h2>
+    <div *ngIf="cartItems.length > 0; else emptyCart">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="card mb-3" *ngFor="let item of cartItems">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img [src]="item.image" [alt]="item.title" class="img-fluid rounded-start" />
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{ item.title }}</h5>
+                  <p class="card-text">{{ item.price | currency }}</p>
+                  <button class="btn btn-danger" (click)="removeFromCart(item)">
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Order Summary</h5>
+              <p class="card-text">Total Items: {{ cartItems.length }}</p>
+              <p class="card-text">
+                Total Price: {{ getTotalPrice() | currency }}
+              </p>
+              <button class="btn btn-primary w-100" (click)="proceedToCheckout()">
+                Proceed to Checkout
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #emptyCart>
+      <div class="alert alert-info" role="alert">
+        Your cart is empty. Start shopping now!
+      </div>
+    </ng-template>
+  </div>
