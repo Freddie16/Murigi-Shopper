@@ -6,26 +6,22 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ProductService {
-  private apiUrl = 'https://fakestoreapi.com'; // Base URL for FakeStoreAPI
+  private apiUrl = 'https://fakestoreapi.com';
 
   constructor(private http: HttpClient) {}
 
-  // Fetch all products
   getProducts(): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}/products`);
   }
 
-  // Fetch a single product by ID
   getProduct(id: number): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/products/${id}`);
   }
 
-  // Fetch all categories
   getCategories(): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}/products/categories`);
   }
 
-  // Fetch products by category
   getProductsByCategory(category: string): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}/products/category/${category}`);
   }

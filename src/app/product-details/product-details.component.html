@@ -1,8 +1,21 @@
-<div *ngIf="product" class="product-details">
-    <h2>{{ product.title }}</h2>
-    <img [src]="product.image" [alt]="product.title" class="img-fluid" />
-    <p>{{ product.description }}</p>
-    <p><strong>Price:</strong> {{ product.price | currency }}</p>
-    <p><strong>Category:</strong> {{ product.category }}</p>
-    <button class="btn btn-primary" (click)="addToCart(product)">Add to Cart</button>
+<div class="container mt-4">
+    <div *ngIf="product" class="row">
+      <div class="col-md-6">
+        <img [src]="product.image" [alt]="product.title" class="img-fluid rounded" />
+      </div>
+      <div class="col-md-6">
+        <h2>{{ product.title }}</h2>
+        <p class="text-muted">{{ product.category }}</p>
+        <p class="lead">{{ product.price | currency }}</p>
+        <p>{{ product.description }}</p>
+        <div class="d-flex gap-2">
+          <button class="btn btn-primary" (click)="addToCart(product)">
+            Add to Cart
+          </button>
+          <a [routerLink]="['/products']" class="btn btn-outline-secondary">
+            Back to Products
+          </a>
+        </div>
+      </div>
+    </div>
   </div>

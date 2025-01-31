@@ -1,10 +1,4 @@
-/* Cart Page Styles */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .card {
+.card {
     border: 1px solid #ddd;
     border-radius: 8px;
     transition: transform 0.2s, box-shadow 0.2s;
@@ -52,6 +46,12 @@
     color: #0c5460;
   }
   
-  #paypal-button-container {
-    margin-top: 1rem;
+  .btn-primary {
+    background-color: #ff9900; /* Amazon's accent color */
+    border-color: #ff9900;
+  }
+  
+  .btn-primary:hover {
+    background-color: #e68a00;
+    border-color: #e68a00;
   }

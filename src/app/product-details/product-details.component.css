@@ -1,0 +1,49 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .img-fluid {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .text-muted {
+    color: #6c757d;
+  }
+  
+  .lead {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745; /* Green color for price */
+  }
+  
+  .d-flex.gap-2 {
+    gap: 1rem;
+  }
+  
+  .btn-primary {
+    background-color: #ff9900; /* Amazon's accent color */
+    border-color: #ff9900;
+  }
+  
+  .btn-primary:hover {
+    background-color: #e68a00;
+    border-color: #e68a00;
+  }
+  
+  .btn-outline-secondary {
+    border-color: #6c757d;
+    color: #6c757d;
+  }
+  
+  .btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: #ffffff;
+  }

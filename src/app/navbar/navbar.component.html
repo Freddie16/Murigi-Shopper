@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" routerLink="/">Simple Shop</a>
       <button
@@ -30,9 +30,9 @@
             [(ngModel)]="searchQuery"
             name="searchQuery"
           />
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-outline-light" type="submit">Search</button>
         </form>
-        <a class="btn btn-primary ms-2" routerLink="/cart">
+        <a class="btn btn-light ms-2" routerLink="/cart">
           <i class="bi bi-cart"></i> Cart
           <span *ngIf="cartItemCount > 0" class="badge bg-danger">{{ cartItemCount }}</span>
         </a>

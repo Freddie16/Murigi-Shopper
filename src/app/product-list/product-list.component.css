@@ -1,0 +1,53 @@
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.d-flex.gap-2 {
+    gap: 3rem;
+  }
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.product-card .card-body {
+  padding: 1rem;
+}
+
+.product-card .card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.product-card .card-text {
+  font-size: 1rem;
+  color: #28a745; /* Green color for price */
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #ff9900; /* Amazon's accent color */
+  border-color: #ff9900;
+}
+
+.btn-primary:hover {
+  background-color: #e68a00;
+  border-color: #e68a00;
+}
+
+.btn-success {
+  background-color: #232f3e; /* Amazon's navbar color */
+  border-color: #232f3e;
+}
+
+.btn-success:hover {
+  background-color: #1a2530;
+  border-color: #1a2530;
+}

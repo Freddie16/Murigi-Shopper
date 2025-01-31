@@ -1,0 +1,85 @@
+/* Categories Page Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #232f3e; /* Amazon's navbar color */
+  }
+  
+  .category-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #232f3e; /* Amazon's navbar color */
+    border-bottom: 2px solid #ff9900; /* Amazon's accent color */
+    padding-bottom: 0.5rem;
+  }
+  
+  .product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 100%;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-card img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .product-card .card-body {
+    padding: 1.5rem;
+  }
+  
+  .product-card .card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #232f3e; /* Amazon's navbar color */
+  }
+  
+  .product-card .card-text {
+    font-size: 1rem;
+    color: #28a745; /* Green color for price */
+    font-weight: bold;
+  }
+  
+  .d-flex.gap-2 {
+    gap: 1rem;
+  }
+  
+  .btn-primary {
+    background-color: #ff9900; /* Amazon's accent color */
+    border-color: #ff9900;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .btn-primary:hover {
+    background-color: #e68a00;
+    border-color: #e68a00;
+  }
+  
+  .btn-success {
+    background-color: #232f3e; /* Amazon's navbar color */
+    border-color: #232f3e;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .btn-success:hover {
+    background-color: #1a2530;
+    border-color: #1a2530;
+  }

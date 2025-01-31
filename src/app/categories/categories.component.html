@@ -1,8 +1,23 @@
-<h2>Categories</h2>
-<ul>
-  <li *ngFor="let category of categories">
-    <a [routerLink]="['/products']" [queryParams]="{ category: category }">
-      {{ category }}
-    </a>
-  </li>
-</ul>
+<div class="container mt-4">
+    <h2>Categories</h2>
+    <div *ngFor="let category of categories" class="mb-5">
+      <h3 class="category-title">{{ category | titlecase }}</h3>
+      <div class="row">
+        <div *ngFor="let product of categoryProducts[category]" class="col-md-4 mb-4">
+          <div class="card product-card">
+            <img [src]="product.image" [alt]="product.title" class="card-img-top" />
+            <div class="card-body">
+              <h5 class="card-title">{{ product.title }}</h5>
+              <p class="card-text">{{ product.price | currency }}</p>
+              <div class="d-flex gap-2">
+                <a [routerLink]="['/products', product.id]" class="btn btn-primary">View Details</a>
+                <button class="btn btn-success" (click)="addToCart(product)">
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

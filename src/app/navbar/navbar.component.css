@@ -1,3 +1,48 @@
 .navbar {
-    margin-bottom: 20px;
+    background-color: #232f3e !important; /* Amazon's navbar color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+    color: #ffffff !important;
+    margin-right: 2rem;
+  }
+  
+  .nav-link {
+    color: #ffffff !important;
+    margin-right: 1rem;
+  }
+  
+  .nav-link:hover {
+    color: #ff9900 !important; /* Amazon's hover color */
+  }
+  
+  .btn-outline-light {
+    border-color: #ffffff;
+    color: #ffffff;
+    margin-left: 1rem;
+  }
+  
+  .btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #232f3e;
+  }
+  
+  .cart-icon {
+    position: relative;
+    margin-left: 1rem;
+  }
+  
+  .cart-icon .badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff9900; /* Amazon's accent color */
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 12px;
   }
