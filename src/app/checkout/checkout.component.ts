@@ -20,10 +20,14 @@ export class CheckoutComponent implements OnInit {
     this.loadPayPalScript();
   }
 
+  getTotalPrice(): number {
+    return this.totalPrice;
+  }
+
   loadPayPalScript(): void {
     if (!window.paypal) {
       const script = document.createElement('script');
-      script.src = `https://www.paypal.com/sdk/js?client-id=AaBmfVFId5noEBHTUjBvlUiLG1cY3JmUVidpled2DFPAGO0d_fnfbMQ1TIjcoAEnupqi_9yV3pmyrrje`;
+      script.src = `https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID`;
       script.onload = () => this.renderPayPalButton();
       document.body.appendChild(script);
     } else {
@@ -49,6 +53,7 @@ export class CheckoutComponent implements OnInit {
           return actions.order.capture().then((details: any) => {
             alert('Transaction completed by ' + details.payer.name.given_name);
             this.cartService.clearCart();
+            this.cartItems = []; // Clear the cart items
           });
         },
       })

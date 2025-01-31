@@ -22,7 +22,7 @@
             <div class="card-body">
               <h5 class="card-title">Order Summary</h5>
               <p class="card-text">Total Items: {{ cartItems.length }}</p>
-              <p class="card-text">Total Price: {{ totalPrice | currency }}</p>
+              <p class="card-text">Total Price: {{ getTotalPrice() | currency }}</p>
               <div id="paypal-button-container"></div>
             </div>
           </div>
