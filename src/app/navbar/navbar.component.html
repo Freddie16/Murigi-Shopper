@@ -33,8 +33,9 @@
             [(ngModel)]="searchQuery"
             name="searchQuery"
           />
-          <button class="btn btn-outline-light" type="submit">Search</button>
-        </form>
+          <button class="btn btn-outline-light search-btn" type="submit">
+            <i class="fa fa-search"></i>
+          </button>        </form>
         <a class="btn btn-light ms-2" routerLink="/cart">
           <i class="bi bi-cart"></i> Cart
           <span *ngIf="cartItemCount > 0" class="badge bg-danger">{{ cartItemCount }}</span>

@@ -28,14 +28,23 @@
   
   .btn-outline-light:hover {
     background-color: #ffffff;
-    color: #232f3e;
+    color: #3247a6;
+  }
+  
+  .search-btn {
+    margin-left: -10px;  /* This will push it slightly to the left */
+  }
+  
+  /* If you need to adjust the icon size */
+  .fa-search {
+    font-size: 14px;
   }
   
   .cart-icon {
     position: relative;
     margin-left: 1rem;
   }
-  
+
   .navbar-brand i {
     font-size: 1.5rem;
     color: #ff9900; /* Amazon's accent color */
