@@ -29,4 +29,8 @@ export class CartService {
     this.cartItems = [];
     this.cartItemsSubject.next(this.cartItems);
   }
+
+  getTotalPrice(): number {
+    return this.cartItems.reduce((total, item) => total + item.price, 0);
+  }
 }

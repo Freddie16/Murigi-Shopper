@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms'; // <-- Add this
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,7 +31,8 @@ import { ProductSearchComponent } from './product-search/product-search.componen
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule, // <-- Add this
+    FormsModule,
+    RouterModule // <-- Add this
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -31,6 +31,12 @@ export class CartComponent implements OnInit {
   }
 
   proceedToCheckout(): void {
-    this.router.navigate(['/checkout']);
+    console.log('Proceed to checkout clicked');
+    this.router.navigate(['/checkout']).then((success) => {
+      if (!success) {
+        console.error('Navigation to checkout failed');
+      }
+    });
   }
+  
 }
