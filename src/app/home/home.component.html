@@ -1,4 +1,80 @@
-<div class="container mt-4">
-    <h1>Welcome to Murigi Shop</h1>
-    <p>Your one-stop shop for amazing products!</p>
+<!-- home.component.html -->
+<div class="container">
+    <!-- Location Banner -->
+    <div class="location-banner">
+      <div class="location-content">
+        <span class="deliver-to">Deliver to</span>
+        <span class="country">Kenya</span>
+      </div>
+    </div>
+  
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <h1>Free returns</h1>
+      <p class="hero-subtitle">on qualifying items*</p>
+      <p class="restrictions">*Restrictions apply</p>
+    </div>
+  
+    <!-- Loading State -->
+    <div *ngIf="loading" class="loading">
+      <p>Loading products...</p>
+    </div>
+  
+    <!-- Error State -->
+    <div *ngIf="error" class="error">
+      <p>{{ error }}</p>
+    </div>
+  
+    <!-- Main Content -->
+    <div *ngIf="!loading && !error" class="product-grid">
+      <div class="category-card" *ngFor="let category of categories">
+        <h2>{{ category.title }}</h2>
+        <div class="product-container">
+          <div class="product-item" *ngFor="let product of category.items">
+            <img [src]="product.image" [alt]="product.title">
+            <p class="product-title">{{ product.title }}</p>
+            <p class="product-price">${{ product.price.toFixed(2) }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Get to Know Us</h3>
+          <ul>
+            <li>About Us</li>
+            <li>Careers</li>
+            <li>Press Releases</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Make Money with Us</h3>
+          <ul>
+            <li>Sell products</li>
+            <li>Become an Affiliate</li>
+            <li>Advertise Your Products</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Payment Products</h3>
+          <ul>
+            <li>Business Card</li>
+            <li>Shop with Points</li>
+            <li>Reload Your Balance</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Let Us Help You</h3>
+          <ul>
+            <li>Your Account</li>
+            <li>Your Orders</li>
+            <li>Shipping Rates & Policies</li>
+            <li>Returns & Replacements</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </div>
